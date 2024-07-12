@@ -1,0 +1,24 @@
+<body>
+    <script>
+        const age = 20;
+        let score = 0;
+
+        // Short Curcuit Evaluation
+        // 앞의 조건이 만족되면 뒤의 조건은 실행하지 않음
+        // if (age >= 20 && score++) { // 1 출력
+        // if (age > 20 && score++) { // 0 출력
+        // if (age >= 20 || score++) { // 0 출력
+        // if (age > 20 || score++) { // 1 출력
+
+        // 연산 기호 1개만 적으면 뒤의 조건까지 실행됨
+        // if (age >= 20 & score++) { // 1 출력
+        if (age >= 20 | score++) { // 1 출력
+
+        }
+        alert(score);
+
+        for (; ;) {
+        }
+        // 초기값, 조건, 증감식 모두 없기 때문에 무한반복됨
+    </script>
+</body>
