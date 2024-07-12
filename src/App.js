@@ -42,6 +42,20 @@ function Result(props) {
     </div>
   );
 }
+
+function MailBox(props) {
+  const unreadMessages = props.unreadMessages;
+  return (
+    <div>
+      <h1>안녕하세요!</h1>
+      {
+        unreadMessages.length > 0 &&
+        <h2>현재{unreadMessages.length}개의읽지않은메시지가있습니다.</h2>
+      }
+    </div>
+  );
+}
+
 function App() {
   const [value, setValue] = useState({});
 
@@ -72,6 +86,7 @@ function App() {
       <Rock handleSelect={handleSelect} />
       <Paper handleSelect={handleSelect} />
       <Result value={value} />
+      <MailBox unreadMessages={[1, 2, 3, 5]} />
     </div>
   );
 }
